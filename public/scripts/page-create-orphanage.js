@@ -68,3 +68,14 @@ function toggleSelect(event) {
 
     input.value = button.dataset.value
 }
+
+function validate(event) {
+
+    const latInput = document.querySelector('[name="lat"]').value
+    const lngInput = document.querySelector('[name="lng"]').value
+    
+    if(latInput == "") {
+        alert('Selecione um ponto no mapa')
+        event.preventDefault()
+    }
+}
